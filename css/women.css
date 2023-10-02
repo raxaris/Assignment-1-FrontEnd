@@ -276,7 +276,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Men-Women */
 .header-wo-men{
     margin: 0 auto;
-    background-color: rgb(79, 158, 156);
+    background-color: rgb(255, 192, 203);
 }
 
 .location a{
@@ -317,7 +317,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .сustom-btn[data-bs-toggle="dropdown"]::after {
-    border-top-color: rgb(79, 158, 156);
+    border-top-color: rgb(255, 192, 203);
     font-size: 13px;
   }
 
@@ -335,8 +335,8 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .square-button:hover {
-    background-color: rgb(79, 158, 156);
+    background-color: rgb(255, 192, 203);
     color: white;
     transition: 0.3s;
-    border: 1px solid rgb(79, 158, 156);
+    border: 1px solid rgb(255, 192, 203);
 }
