@@ -134,21 +134,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .product-manufacturer{
+<<<<<<< Updated upstream
     padding-top: 10px;
     font-size: 18px;
+=======
+    padding-top: 5px;
+    font-size: 17px;
+>>>>>>> Stashed changes
     font-weight: 600;
     color: #000000;
 }
 
 .product-sex{
+<<<<<<< Updated upstream
     padding-top: 10px;
     font-size: 15px;
+=======
+    font-size: 14px;
+>>>>>>> Stashed changes
     color: grey;
     font-weight: 300;
 }
 
 .product-price{
-    padding-top: 10px;
     font-weight: 600;
     font-size: 18px;
     color: #000000;
@@ -273,3 +281,72 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 20px;
     color: black;
 }
+<<<<<<< Updated upstream
+=======
+/* Men-Women */
+.header-wo-men{
+    margin: 0 auto;
+    background-color: rgb(79, 158, 156);
+}
+
+.location a{
+    text-decoration: none;
+    color: gray;
+    font-size: 12px;
+}
+
+.location i{
+    color: gray;
+    font-size: 12px;
+}
+
+.products-title{
+    font-size: 22px;
+    color: #000000;
+    font-weight: 600;
+}
+
+.products-price{
+    color:rgba(164, 164, 164, 0.99);
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+.intro a:hover{
+    color: rgb(79, 158, 156);
+}
+.show-by-items{
+    padding: 0 3px;
+    font-size: 13px;
+    color: gray;
+    text-decoration: none;
+}
+
+.custom-btn:focus {
+    box-shadow: none;
+  }
+
+  .сustom-btn[data-bs-toggle="dropdown"]::after {
+    border-top-color: rgb(79, 158, 156);
+    font-size: 13px;
+  }
+
+  .custom-btn-gr[data-bs-toggle="dropdown"]::after {
+    border-top-color: rgb(255, 255, 255);
+    font-size: 13px;
+  }
+
+  .product-type{
+    font-size: 15px;
+    color: grey;
+    font-weight: 300;
+}
+
+
+.square-button:hover {
+    background-color: rgb(79, 158, 156);
+    color: white;
+    transition: 0.3s;
+    border: 1px solid rgb(79, 158, 156);
+}
+>>>>>>> Stashed changes
