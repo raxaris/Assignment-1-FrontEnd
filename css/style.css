@@ -134,24 +134,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .product-manufacturer{
-<<<<<<< Updated upstream
-    padding-top: 10px;
-    font-size: 18px;
-=======
     padding-top: 5px;
     font-size: 17px;
->>>>>>> Stashed changes
     font-weight: 600;
     color: #000000;
 }
 
 .product-sex{
-<<<<<<< Updated upstream
-    padding-top: 10px;
-    font-size: 15px;
-=======
     font-size: 14px;
->>>>>>> Stashed changes
     color: grey;
     font-weight: 300;
 }
@@ -281,8 +271,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 20px;
     color: black;
 }
-<<<<<<< Updated upstream
-=======
 /* Men-Women */
 .header-wo-men{
     margin: 0 auto;
@@ -349,4 +337,3 @@ h1, h2, h3, h4, h5, h6 {
     transition: 0.3s;
     border: 1px solid rgb(79, 158, 156);
 }
->>>>>>> Stashed changes
