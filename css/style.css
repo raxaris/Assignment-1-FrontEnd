@@ -3,7 +3,6 @@ body{
     background-color: rgb(255, 255, 255);
     font-size: 15px;
     color: #000000;
-    position: relative;
 }
 
 
@@ -361,15 +360,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .plusminus span.num{
-    font-size: 15px;
+    font-size: 14px;
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     border-left: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.plusminus:hover{
-    border-radius: 12px;
-    background-color: rgb(79, 158, 156);
-    color: white;
-    transition: 0.3s;
-    border: 1px solid rgb(79, 158, 156); 
+.plusminus span:hover{
+    color: rgb(79, 158, 156);
+}
+
+.page-link{
+    color: rgb(79, 158, 156);
 }
