@@ -52,6 +52,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 30px;
 }
 
+<<<<<<< HEAD
 .column-picture{
     position: relative;
 }
@@ -118,6 +119,17 @@ h1, h2, h3, h4, h5, h6 {
     height: 20px; 
     margin: 20px 0;
     border: none;
+=======
+.shop-now img{
+    width: 100%;
+    object-fit: cover;
+    height: 65vh;
+}
+.shop-now .card-img-overlay{
+    background-color: rgba(0,0,0,0.4); 
+    display: flex; 
+    align-items: flex-end;
+>>>>>>> 9936e26 (shop-now update, deleted css related to column)
 }
 
 .assets{
