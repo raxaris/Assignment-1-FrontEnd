@@ -52,74 +52,6 @@ h1, h2, h3, h4, h5, h6 {
     padding: 30px;
 }
 
-<<<<<<< HEAD
-.column-picture{
-    position: relative;
-}
-.column-picture img{
-    width: 100%;
-    min-height: 65vh;
-}
-
-.column-picture::before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    min-height: 65vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-.column-banner{
-    font-family: 'Roboto', sans-serif;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    color: white;
-    padding-left: 40.5px;
-    padding-right: 45px;
-    padding-top: 220px;
-}
-
-
-.column-banner-title{
-    letter-spacing: -1px;
-    font-size: 27px;
-    font-weight: 600;
-}
-
-.column-banner-text{
-    padding-top: 10px;
-    font-weight: 400;
-    font-size: 15px;
-}
-
-@media (max-width: 380px) {
-    .column-banner{
-        font-family: 'Roboto', sans-serif;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        color: white;
-        padding-left: 40.5px;
-        padding-right: 45px;
-        padding-top: 100px;
-    }
-}
-
-.products-container{
-    background: rgb(245, 247, 249);
-}
-
-.custom-divider {
-    width: 7%;
-    background-color: rgba(0, 132, 214);
-    height: 20px; 
-    margin: 20px 0;
-    border: none;
-=======
 .shop-now img{
     width: 100%;
     object-fit: cover;
@@ -129,7 +61,6 @@ h1, h2, h3, h4, h5, h6 {
     background-color: rgba(0,0,0,0.4); 
     display: flex; 
     align-items: flex-end;
->>>>>>> 9936e26 (shop-now update, deleted css related to column)
 }
 
 .assets{
