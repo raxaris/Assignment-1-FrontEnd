@@ -314,7 +314,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: none;
   }
 
-  .сustom-btn[data-bs-toggle="dropdown"]::after {
+  .custom-btn[data-bs-toggle="dropdown"]::after {
     border-top-color: rgb(79, 158, 156);
     font-size: 13px;
   }
