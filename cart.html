@@ -73,17 +73,17 @@
                 <div class="cart-title pe-4">Shopping cart contains <span id="amountOfAssets">1</span> item<span id="plural">s</span></div>
                 <div class="container cart-items p-0 m-0">
                     <div class="row p-0">
-                        <div class="inner-cart col-9">
+                        <div class="inner-cart col-12 col-md-9">
                             <hr class="solid liner1 my-3">
                             <div class="cart-items">
                                 <div class="row">
-                                    <div class="item-image col-2"><img src="img/assets/tnfjacke.jpg" style="width: 100%;"></div>
-                                    <div class="item-info col-7">
+                                    <div class="item-image col-12 col-md-2"><img src="img/assets/tnfjacke.jpg" style="width: 100%;"></div>
+                                    <div class="item-info col-12 col-md-7">
                                         <div class="item-title"><span class="item-brand">The North Face</span> <span class="item-type">Jacket</span></div>
                                         <div class="item-article">Article: <span class="article-number">PVL718214</span></div>
                                         <div class="item-price"><span class="items-price">300.00</span>$</div>
                                         <div class="dropdown py-2">
-                                            <a class="btn custom-btn dropdown-toggle" style="width: 18%; color: gray; border: 1px solid rgba(220,220,220,0.9);font-weight: 500; background-color: transparent; border-radius: 0; padding: 7px 10px; font-size: 14px; " type="button" id="clear" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <a class="btn custom-btn dropdown-toggle item-size" style="color: gray; border: 1px solid rgba(220,220,220,0.9);font-weight: 500; background-color: transparent; border-radius: 0; padding: 7px 10px; font-size: 14px; " type="button" id="clear" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Size
                                             </a>
                                             <ul class="dropdown-menu dropdown-menu-sm" style="border-radius: 0; max-height: 80px; overflow-y: auto;">
@@ -96,13 +96,13 @@
                                                 <li><a class="dropdown-item" href="#" style="font-size: 10px;">XL</a></li>
                                             </ul>
                                         </div>
-                                        <div class="item-counter" style="width: 18%;">
+                                        <div class="item-counter">
                                             <span class="plus">+</span>
                                             <span class="num">01</span>
                                             <span class="minus">-</span>
                                         </div>
                                     </div>
-                                    <div class="item-actions col-3 d-flex justify-content-end" style="color: gray;">
+                                    <div class="item-actions col-12 col-md-3 d-flex justify-content-end" style="color: gray;">
                                         <div class="remove-item">
                                             <i class="fa-regular fa-trash-can" style="padding-right: 10px;"></i> Remove
                                         </div>
@@ -111,7 +111,7 @@
                                 <hr class="solid liner1 my-3">
                             </div>
                         </div>
-                        <div class="col-3 my-3">
+                        <div class="col-12 col-md-3 my-3">
                             <div class="total">
                                 <div class="inner-total">
                                     <div class="total-summa pb-1 d-flex justify-content-between">Order price: <div class="total-num"><span>300.00</span>$</div></div>
@@ -171,15 +171,16 @@
                 </div>
                 <div class="col-12 col-md-6 col-xxl-2 form py-2">
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label form-title" style="font-size: 20px;
+                    <label for="emailID" class="form-label form-title" style="font-size: 20px;
                     font-weight: 600;">Email address</label>
-                    <input type="email" class="form-control my-2" id="exampleFormControlInput1" placeholder="name@example.com">
-                    <button type="submit" class="btn my-1" style="background-color: rgb(79, 158, 156); border-color: rgb(79, 158, 156); color: white;">Subscribe</button>
+                    <input type="email" class="form-control my-2" id="emailID" placeholder="name@example.com">
+                    <button onclick="validateEmail()" type="submit" class="btn btn-primary my-1" id="emailSubmit">Subscribe</button>
                     </div>
             </div>
         </div>
     </div>
     <hr class="solid liner1">
+    <div id="liveAlertPlaceholder" style="position: fixed; top: 6px; display: flex; justify-content: center; width: 100%;"></div>
     <div class="container-fluid cr" style="width: 82%;">
         <div class="cr-text">
                 © 2023 DNK Kazakhstan.
@@ -194,6 +195,7 @@
             </ul>
         </div>
     </div>
+    <script src="js/emailscript.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
