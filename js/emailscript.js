@@ -26,6 +26,8 @@ function validateEmail() {
         appendAlert("Error: Invalid Email", "danger");
         return false;
     } else {
+        email.value = "";
+        appendAlert("Success: You have successfully subscribed", "success");
         return true;
     }
 }
