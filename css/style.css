@@ -34,6 +34,18 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.cart-icon{
+    position: relative;
+}
+
+.cart-quantity{
+    position: absolute;
+    background-color: red; 
+    border-radius: 50%;
+    font-size: 7px;
+    padding: 1px 5px;
+}
+
 .banner{
     padding-top: 135px;
     color: white;
@@ -250,6 +262,10 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 16px;
 }
 
+.intro{
+    font-family: 'Poppins', sans-serif;
+}
+
 .intro a:hover{
     color: rgb(79, 158, 156);
 }
@@ -342,6 +358,27 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     border: 1px solid rgba(220,220,220,0.9);
     margin-top: 5px; 
+    width: 30%;
+}
+
+.item-size{
+    width: 30%;
+}
+
+@media (min-width: 768px) {
+    .item-counter{
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(220,220,220,0.9);
+        margin-top: 5px;
+        width: 18%; 
+    }
+
+    .item-size{
+        width: 18%;
+    }
 }
 
 .item-counter span{
@@ -369,4 +406,33 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
     transition-duration: 0.3s;
     background-color: rgb(79, 158, 156);
+}
+
+.remove-item{
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.total{
+    background-color: rgb(233, 242, 255);
+}
+
+.inner-total{
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+.total-total{
+    font-weight: 600;
+}
+
+.submit-order{
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: rgb(64, 163, 146);
+}
+
+.submit-order:hover{
+    transition-duration: 0.3s;
+    background-color: rgb(91, 177, 163);
 }
