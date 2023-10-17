@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-.cart-icon{
+/* .cart-icon{
     position: relative;
 }
 
@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 50%;
     font-size: 7px;
     padding: 1px 5px;
-}
+} */
 
 .banner{
     padding-top: 135px;
@@ -436,3 +436,35 @@ h1, h2, h3, h4, h5, h6 {
     transition-duration: 0.3s;
     background-color: rgb(91, 177, 163);
 }
+
+.plus, .minus {
+    user-select: none;
+}
+
+/* countdown */
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: #333;;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  .countdown-item {
+    text-align: center;
+    margin: 0 10px;
+  }
+  
+  .countdown-number, .coundown-text{
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  .countdown-label {
+    font-size: 16px;
+    margin-top: 5px;
+  }
