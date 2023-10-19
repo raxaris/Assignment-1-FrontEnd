@@ -150,10 +150,92 @@ let products = [
     } 
 ];
 
+
+let productsArr = [];
 const productsContainer = document.querySelector(".products-container");
+const pagesContainer = document.querySelector(".pagesContainer")
 
+//At the loading of the html page, creates products showedby 6 on first page
+window.addEventListener('load', () =>{
+    showBy(6);
+    page(0);
+})
 
-products.forEach(product => {
+//Creates page buttons (adds to html from the pattern)
+function createPages(number) {
+    const productBlock = document.createElement("div");
+    productBlock.classList.add("page", "col-xxl-1", "col-sm-2", "col-3", "p-1");
+
+    productBlock.innerHTML = ` 
+    <div class="square-button" onclick="page(${number})" style="border: 1px solid rgba(220,220,220,0.9); text-align: center; padding: 5px 10px; cursor: pointer;">
+        <div class="number">${number+1}</div>
+    </div>
+    `;
+
+    pagesContainer.appendChild(productBlock);
+}
+
+//Clears page buttons to prevent overlaying of page buttons
+function clearPages() {
+    const pages = document.querySelectorAll(".page");
+
+    pages.forEach(page => {
+        page.remove();
+    })
+}
+
+//Clears products to prevent overlaying of products
+function clearProducts() {
+    const products = document.querySelectorAll(".assets");
+
+    products.forEach(product => {
+        product.remove();
+    })
+}
+
+//Called when showBy has changed
+function showBy(n) {
+    clearPages();
+    for(i=0; i<products.length/n; i++) {
+        createPages(i)
+        //creates arrays for each page
+        productsArr[i] = [];
+    }
+    if (products.length - n <= 0) {
+        clearPages();
+    }
+    generate(n);
+    page(0);
+}
+
+//called when switching pages
+function page(number) {
+    clearProducts();
+    //creates products on page
+    productsArr[number].forEach( product =>{
+        show(product);
+    });
+}
+
+//generates products and sorts them for each page
+function generate(n) {
+    let count = 0;
+    for (i=0; i < products.length/n; i++) {
+        for (j=0; j<n;j++) {
+            //adds product to each array of products for each page
+            productsArr[i].push(products[count]);
+            //counts id of products to prevent repeating
+            count++;
+            //breaks loop if there are no products left to prevent errors
+            if (count > products.length) {
+                break;
+            }
+        }
+    }
+}
+
+//Creates products from the html pattern
+function show(product) {
     const productBlock = document.createElement("div");
     productBlock.classList.add("col-12", "col-sm-6", "col-md-4", "col-xxl-2", "assets");
     productBlock.setAttribute("data-id", product.id);
@@ -191,4 +273,4 @@ products.forEach(product => {
 
     
     productsContainer.appendChild(productBlock);
-});
+}
