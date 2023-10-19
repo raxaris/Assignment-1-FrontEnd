@@ -150,12 +150,80 @@ let products = [
     } 
 ];
 
+let id = 0;
+let productsArr = [];
 const productsContainer = document.querySelector(".products-container");
+const pagesContainer = document.querySelector(".pagesContainer")
 
+window.addEventListener('load', () =>{
+    showBy(6);
+    page(0);
+})
 
-products.forEach(product => {
+function createPages(number) {
     const productBlock = document.createElement("div");
-    productBlock.classList.add("col-12", "col-sm-6", "col-md-4", "col-xxl-2", "assets");
+    productBlock.classList.add("page", "col-xxl-1", "col-sm-2", "col-3", "p-1");
+
+    productBlock.innerHTML = ` 
+    <div class="square-button" onclick="page(${number})" style="border: 1px solid rgba(220,220,220,0.9); text-align: center; padding: 5px 10px; cursor: pointer;">
+        <div class="number">${number+1}</div>
+    </div>
+    `;
+
+    pagesContainer.appendChild(productBlock);
+}
+
+function clearPages() {
+    const pages = document.querySelectorAll(".page");
+
+    pages.forEach(page => {
+        page.remove();
+    })
+}
+
+function clearProducts() {
+    const products = document.querySelectorAll(".productItem");
+
+    products.forEach(product => {
+        product.remove();
+    })
+}
+
+function showBy(n) {
+    id = 0;
+    clearPages();
+    for(i=0; i<products.length/n; i++) {
+        createPages(i)
+        productsArr[i] = [];
+    }
+    generate(n);
+    page(0);
+}
+
+function page(number) {
+    clearProducts();
+    productsArr[number].forEach( product =>{
+        show(product);
+    });
+}
+
+function generate(n) {
+    let count = 0;
+    for (i=0; i < products.length/n; i++) {
+        for (j=0; j<n;j++) {
+            productsArr[i].push(products[count]);
+            count++;
+            if (count > products.length) {
+                break;
+            }
+        }
+    }
+}
+
+
+function show(product) {
+    const productBlock = document.createElement("div");
+    productBlock.classList.add("productItem","col-12", "col-sm-6", "col-md-4", "col-xxl-2", "assets");
     productBlock.setAttribute("data-id", product.id);
 
     productBlock.innerHTML = `
@@ -191,4 +259,4 @@ products.forEach(product => {
 
     
     productsContainer.appendChild(productBlock);
-});
+}
