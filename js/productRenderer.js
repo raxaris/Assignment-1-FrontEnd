@@ -159,6 +159,7 @@ const pagesContainer = document.querySelector(".pagesContainer")
 window.addEventListener('load', () =>{
     showBy(6);
     page(0);
+    addEventListeners();
 })
 
 //Creates page buttons (adds to html from the pattern)
@@ -285,6 +286,7 @@ function addEventListeners() {
         const plus = asset.querySelector('.plus');
         const minus = asset.querySelector('.minus');
         const num = asset.querySelector('.num');
+        const addButton = asset.querySelector('.add-button');
         
         plus.addEventListener('click', () => {
             let currentNum = parseInt(num.innerText, 10);
@@ -300,6 +302,22 @@ function addEventListeners() {
                 currentNum--;
                 num.innerText = currentNum.toString().padStart(2, '0');
             }
+        });
+
+        addButton.addEventListener('click', () => {
+            const productInfo = {
+                manufacturer: asset.querySelector('.product-manufacturer a').innerText,
+                price: parseFloat(asset.querySelector('.product-price').innerText.replace('$', '')),
+                quantity: parseInt(num.innerText, 10),
+                type: asset.querySelector('.product-type a').innerText,
+                imageUrl: asset.querySelector('.product-image img').getAttribute('src')
+            };
+            
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            
+            cart.push(productInfo);
+            
+            localStorage.setItem("cart", JSON.stringify(cart));
         });
     });
 }
