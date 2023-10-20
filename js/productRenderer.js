@@ -159,7 +159,6 @@ const pagesContainer = document.querySelector(".pagesContainer")
 window.addEventListener('load', () =>{
     showBy(6);
     page(0);
-    addEventListeners();
 })
 
 //Creates page buttons (adds to html from the pattern)
@@ -218,6 +217,7 @@ function page(number) {
     productsArr[number].forEach( product =>{
         show(product);
     });
+    addEventListeners();
 }
 
 //generates products and sorts them for each page
