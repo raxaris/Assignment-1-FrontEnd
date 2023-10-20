@@ -1,8 +1,6 @@
 function validateEmail() {
     var email = document.getElementById("emailID");
 
-    console.log("asdasd")
-
     var validRegEx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]*[@][a-zA-Z0-9]*[\.][a-z]{2,4}$/;
 
     const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
