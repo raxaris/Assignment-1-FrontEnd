@@ -147,6 +147,132 @@ let products = [
         "type": "T-Shirt",
         "price": 120,
         "imageUrl": "img/assets/niketishka.jpg"
+    },
+    {
+        "id": "19",
+        "manufacturer": "Puma",
+        "type": "Suit",
+        "price": 300,
+        "imageUrl": "img/assets/pumapukaibezshuma.jpg"
+    },
+    {
+        "id": "20",
+        "manufacturer": "Adidas",
+        "type": "Accesories",
+        "price": 150,
+        "imageUrl": "img/assets/adidas sumka.jpg"
+    },
+    {
+        "id": "21",
+        "manufacturer": "Zara",
+        "type": "Shirt",
+        "price": 80,
+        "imageUrl": "img/armani.jpg"
+    },
+    {
+        "id": "22",
+        "manufacturer": "EA7",
+        "type": "T-Shirt",
+        "price": 120,
+        "imageUrl": "img/assets/EA7 tishka.jpg"
+    },
+    {
+        "id": "23",
+        "manufacturer": "Adidas",
+        "type": "Trousers",
+        "price": 160,
+        "imageUrl": "img/assets/ADIDAS BOT.jpg"
+    },
+    {
+        "id": "24",
+        "manufacturer": "TNF",
+        "type": "Sweater",
+        "price": 150,
+        "imageUrl": "img/assets/tnf.jpg"
+    },
+    {
+        "id": "25",
+        "manufacturer": "TNF",
+        "type": "Trousers",
+        "price": 125,
+        "imageUrl": "img/assets/tnftrous.jpg"
+    },
+    {
+        "id": "26",
+        "manufacturer": "TNF",
+        "type": "Sweater",
+        "price": 120,
+        "imageUrl": "img/assets/TNFsweater.jpg"
+    },
+    {
+        "id": "27",
+        "manufacturer": "AX",
+        "type": "Trousers",
+        "price": 150,
+        "imageUrl": "img/assets/axtrous.jpg"
+    },
+    {
+        "id": "28",
+        "manufacturer": "Timberland",
+        "type": "Shoes",
+        "price": 140,
+        "imageUrl": "img/assets/timberlandshoes.jpg"
+    },
+    {
+        "id": "29",
+        "manufacturer": "Nike",
+        "type": "Shoes",
+        "price": 220,
+        "imageUrl": "img/assets/nikedikie.jpg"
+    },
+    {
+        "id": "30",
+        "manufacturer": "Skechers",
+        "type": "Shoes",
+        "price": 200,
+        "imageUrl": "img/assets/skechershoes.jpg"
+    },
+    {
+        "id": "31",
+        "manufacturer": "TNF",
+        "type": "Jacket",
+        "price": 300,
+        "imageUrl": "img/assets/tnf jakc.jpg"
+    },
+    {
+        "id": "32",
+        "manufacturer": "TNF",
+        "type": "Jacket",
+        "price": 300,
+        "imageUrl": "img/assets/tnfjacke.jpg"
+    },
+    {
+        "id": "33",
+        "manufacturer": "Lee",
+        "type": "Trousers",
+        "price": 150,
+        "imageUrl": "img/assets/trouserslee.jpg"
+    },
+    {
+        "id": "34",
+        "manufacturer": "AX",
+        "type": "Suit",
+        "price": 300,
+        "imageUrl": "img/assets/halat.jpg"
+    },
+    {
+        "id": "35",
+        "manufacturer": "Nike",
+        "type": "Accesories",
+        "price": 100,
+        "imageUrl": "img/assets/nikebag.jpg"
+    },
+    {
+        "id": "36",
+        "manufacturer": "Nike",
+        "type": "T-Shirt",
+        "price": 120,
+        "imageUrl": "img/assets/niketishka.jpg"
     }
 ];
 
@@ -207,7 +333,6 @@ function showBy(n) {
     generate(n);
     page(0);
     //Adding eventListeners
-    addEventListeners();
 }
 
 //called when switching pages
@@ -278,7 +403,7 @@ function show(product) {
     productsContainer.appendChild(productBlock);
 }
 
-//Adding eventListeners
+//Adding eventListeners Of (+- button)
 function addEventListeners() {
     const assets = document.querySelectorAll('.assets');
     
