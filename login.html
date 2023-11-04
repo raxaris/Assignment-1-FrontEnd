@@ -18,74 +18,78 @@
         <title>DNK</title>
     </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark px-4 py-4" style="background-color: rgba(33, 89, 148, 0.5);">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#" style="margin: 0;"><img class="logo" src="img/logo.png" width="70%"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="navbar-container collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active " aria-current="page" href="index.html">EVERYTHING</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link "  href="men.html">MEN</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="women.html">WOMEN</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">ACCESORIES</a>
-              </li>
-            </ul>
-            <ul class="menu navbar-nav ms-auto mb-2 mb-lg-0 fw-light">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">ABOUT</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">CONTACT US</a>
-                </li>
-                <li class="nav-item">
-                  <a class="price nav-link active fw-bold" aria-current="page" href="#">$0.00</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-circle-user"></i></a>
+    <div class="header-wo-men container-fluid p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-4 py-4" style="background-color: rgba(33, 89, 148, 0.2);">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#" style="margin: 0;"><img class="logo" src="img/logo.png" width="70%"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="navbar-container collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">EVERYTHING</a>
                   </li>
-              </ul>
-          </div>
-        </div>
-      </nav>
-   <div class="d-flex justify-content-center align-items-center bg-light" style="height: 65vh;"> 
-    <div class="card col-10 col-md-6 col-lg-4">
-        <div class="card-body">
-            <h5 class="card-title text-center">Login</h5>
-            <form>
-                <div class="mb-3">
-                    <label for="username" class="form-label">Phone or Email</label>
-                    <input type="text" class="form-control" id="usernameLogin" required>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="men.html">MEN</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="women.html">WOMEN</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">ACCESORIES</a>
+                  </li>
+                </ul>
+                <ul class="menu navbar-nav ms-auto mb-2 mb-lg-0 fw-light">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="#">CONTACT US</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="price nav-link active fw-bold" aria-current="page" href="#">$0.00</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="signup.html"><i class="fa-solid fa-circle-user"></i></a>
+                      </li>
+                  </ul>
                 </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="passwordLogin" required>
-                </div>
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="rememberMe">
-                        <label class="form-check-label" for="rememberMe">Remember me</label>
-                    </div>
-                    <a class="text-decoration-none px-2" href="#">Forgot password?</a>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="btn loginButton text-white px-5">Login</button>
-                </div>
-            </form>
-        </div>
+            </div>
+        </nav> 
     </div>
-   </div>
+    <main>
+        <div class="d-flex justify-content-center align-items-center bg-light" style="height: 65vh;"> 
+            <div class="card col-10 col-md-6 col-lg-4">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Login</h5>
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Phone or Email</label>
+                            <input type="text" class="form-control" id="usernameLogin" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="passwordLogin" required>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Remember me</label>
+                            </div>
+                            <a class="text-decoration-none px-2 login" href="#">Forgot password?</a>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn loginButton text-white px-5">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
    <hr class="solid liner1">
     <div class="container-fluid footer" style="width: 78%;">
             <div class="row align-items-center justify-content-between">
