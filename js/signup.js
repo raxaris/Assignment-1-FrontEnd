@@ -1,7 +1,9 @@
 class User{
+    userName;
     phoneOrEmail;
     password;
-    constructor(POE, passwd) {
+    constructor(POE, passwd, userName) {
+        this.userName = userName;
         this.phoneOrEmail = POE;
         this.password = passwd;
     }
@@ -12,14 +14,15 @@ document.getElementById('signUpForm').addEventListener('submit', function(event)
 }) 
 
 function signUpUser() {
+    const userName = document.getElementById('nameSignup').value;
     const userPhoneOrEmail = document.getElementById('usernameSignup').value;
     const userPassword = document.getElementById('passwordSignup').value;
 
 
-    checkPassword(userPhoneOrEmail, userPassword);
+    checkPassword(userName, userPhoneOrEmail, userPassword);
 }
 
-function checkPassword(userPhoneOrEmail ,userPassword) {
+function checkPassword(userName, userPhoneOrEmail ,userPassword) {
     const userPasswordCheck = document.getElementById('passwordCheckSignup').value;
 
     const passwordPattern = /(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}/;
@@ -30,7 +33,7 @@ function checkPassword(userPhoneOrEmail ,userPassword) {
             return false;
         } else {
             if(localStorage.getItem(userPhoneOrEmail) === null) {
-                createUser(userPhoneOrEmail, userPassword);
+                createUser(userName, userPhoneOrEmail, userPassword);
             } else {
                 alertMSG("Error: User already exists!");
             }
@@ -40,8 +43,8 @@ function checkPassword(userPhoneOrEmail ,userPassword) {
     }
 }
 
-function createUser(userPhoneOrEmail,  userPassword) {
-    const user = new User(userPhoneOrEmail,userPassword);
+function createUser(userName, userPhoneOrEmail,  userPassword) {
+    const user = new User(userPhoneOrEmail,userPassword, userName);
 
     const userToJSON = JSON.stringify(user);
 
