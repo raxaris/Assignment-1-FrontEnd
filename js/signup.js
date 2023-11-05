@@ -29,17 +29,21 @@ function checkPassword(userName, userPhoneOrEmail ,userPassword) {
 
     if(userPassword.match(passwordPattern)) {
         if(userPasswordCheck != userPassword) {
-            alertMSG("Error: Passwords are different");
+            alertMSG("Error: Passwords are different", "danger");
             return false;
         } else {
             if(localStorage.getItem(userPhoneOrEmail) === null) {
                 createUser(userName, userPhoneOrEmail, userPassword);
+                document.getElementById('nameSignup').value = "";
+                document.getElementById('usernameSignup').value = "";
+                document.getElementById('passwordSignup').value = "";
+                alertMSG("You have successfully signed up!", "success")
             } else {
-                alertMSG("Error: User already exists!");
+                alertMSG("Error: User already exists!", "danger");
             }
         }
     } else {
-        alertMSG("Error: Invalid password")
+        alertMSG("Error: Invalid password", "danger")
     }
 }
 
@@ -59,7 +63,7 @@ function getUser(key) {
     console.log(JSONToUser);
 }
 
-function alertMSG(msg) {
+function alertMSG(msg, alertType) {
     const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
     const appendAlert = (message, type) => {
         const wrapper = document.createElement('div')
@@ -77,5 +81,5 @@ function alertMSG(msg) {
         bootstrap.Alert.getOrCreateInstance(document.querySelector(".alert")).close();
     }, 1500)
 
-    appendAlert(msg, "danger");
+    appendAlert(msg, alertType);
 }

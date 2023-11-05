@@ -18,12 +18,23 @@ function logIn() {
     const password = document.getElementById('passwordLogin').value;
 
 
+    
+    if(phoneOrEmail == "Admin") {
+        if(password == "Admin") {
+            window.location.href = "adminPage.html";
+        } else {
+            alertMSG("Wrong password or userName!", "danger")
+        }
+    }
+
     if (localStorage.getItem(phoneOrEmail)) {
         const userJSON = localStorage.getItem(phoneOrEmail);
         const JSONtoUser = JSON.parse(userJSON);
 
         if(JSONtoUser.password == password) {
             alertMSG("Wellcome " + JSONtoUser.userName + ", You have succesfully logged in", "success")
+            document.getElementById('usernameLogin').value = '';
+            document.getElementById('passwordLogin').value = '';
         } else {
             alertMSG("Wrong password or userName!", "danger")
         }
