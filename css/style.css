@@ -511,3 +511,12 @@ h1, h2, h3, h4, h5, h6 {
 .login:hover{
     color:rgb(79, 158, 156)
 }
+th, td, tr {
+    border: 1px solid #b4b1b1 ;
+  }
+  th:last-child, td:last-child {
+    border-right: none;
+}
+.table thead th {
+    border-bottom: none;
+  }
