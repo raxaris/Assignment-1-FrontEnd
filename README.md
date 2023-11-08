@@ -33,6 +33,6 @@ To run this application locally, follow these steps:
 - Local Storage
 
 ## Contributiors:
-- [Bexultan-A]((https://github.com/Bexultan-A))
+- [Bexultan-A](https://github.com/Bexultan-A)
 - [HubertFisher](https://github.com/HubertFisher)
 - [raxaris](https://github.com/raxaris)
