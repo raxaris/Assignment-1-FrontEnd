@@ -443,6 +443,28 @@ function addEventListeners() {
             cart.push(productInfo);
             
             localStorage.setItem("cart", JSON.stringify(cart));
+            alertMSG(productInfo.manufacturer + " has been added to the cart", "success")
         });
     });
+}
+
+function alertMSG(msg, alertType) {
+    const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+    const appendAlert = (message, type) => {
+        const wrapper = document.createElement('div')
+        wrapper.innerHTML = [
+          `<div class="alert alert-${type} alert-dismissible" role="alert" style="width: 400px;">`,
+          `   <div>${message}</div>`,
+          '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+          '</div>'
+        ].join('')
+      
+        alertPlaceholder.append(wrapper)
+    }
+
+    setTimeout(function() {
+        bootstrap.Alert.getOrCreateInstance(document.querySelector(".alert")).close();
+    }, 1500)
+
+    appendAlert(msg, alertType);
 }
