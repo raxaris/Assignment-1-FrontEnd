@@ -39,6 +39,7 @@ function renderCart() {
         removeButton.addEventListener("click", () => {
             removeCartItem(index);
             renderCart();
+            updateCartItemCount();
         });
 
         cartContainer.appendChild(itemElement);
@@ -74,6 +75,7 @@ function addEventListeners() {
                 num.innerText = currentNum.toString();
                 updateCartItemQuantity(index, currentNum);
             }
+            updateCartItemCount();
         });
         
         minus.addEventListener('click', () => {
@@ -83,6 +85,7 @@ function addEventListeners() {
                 num.innerText = currentNum.toString();
                 updateCartItemQuantity(index, currentNum);
             }
+            updateCartItemCount();
         });
     });
 }
