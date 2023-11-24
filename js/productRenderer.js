@@ -440,7 +440,17 @@ function addEventListeners() {
             
             const cart = JSON.parse(localStorage.getItem("cart")) || [];
             
-            cart.push(productInfo);
+            const existingProductIndex = cart.findIndex(item =>
+                item.price === productInfo.price &&
+                item.manufacturer === productInfo.manufacturer &&
+                item.type === productInfo.type
+            );
+        
+            if (existingProductIndex !== -1) {
+                cart[existingProductIndex].quantity += productInfo.quantity;
+            } else {
+                cart.push(productInfo);
+            }
             
             localStorage.setItem("cart", JSON.stringify(cart));
             alertMSG(productInfo.manufacturer + " has been added to the cart", "success")
