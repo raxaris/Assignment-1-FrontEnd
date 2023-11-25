@@ -454,6 +454,7 @@ function addEventListeners() {
             
             localStorage.setItem("cart", JSON.stringify(cart));
             alertMSG(productInfo.manufacturer + " has been added to the cart", "success")
+            updateCartItemCount();
         });
     });
 }

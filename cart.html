@@ -51,7 +51,14 @@
                       <a class="price nav-link active fw-bold" aria-current="page" href="#">$0.00</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+                        <button type="button" class="icon-button">
+                            <a class="nav-link active" aria-current="page" href="cart.html">
+                                <span class="material-icons">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                </span>
+                                <span id="cartItemCount" class="icon-button__badge"></span>
+                            </a>
+                        </button>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="signup.html"><i class="fa-solid fa-circle-user"></i></a>
@@ -194,6 +201,7 @@
             </ul>
         </div>
     </div>
+    <script src="js/cartCounter.js"></script>
     <script src="js/cart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="js/emailscript.js"></script>
